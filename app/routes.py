@@ -1,14 +1,17 @@
 from app import app
 from app.controller import MakananController
 
+
 @app.route('/')
 def index():
-   return "Hello"
+    return "Hello"
+
 
 @app.route('/makanan', methods=['GET'])
 def makanans():
-   return MakananController.index()
+    return MakananController.index()
+
 
 @app.route('/makanan/<id>', methods=['GET'])
 def makanansDetail(id):
-   return MakananController.detail(id)
+    return MakananController.detail(id)
